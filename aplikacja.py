@@ -30,3 +30,22 @@ def send_prompt(prompt):
         return json.loads(response_data)["choices"][0]["message"]["content"]
     else:
         raise Exception(f"Błąd API: {response.status}, {response.read().decode('utf-8')}")
+        
+    
+def read_article(file_path):
+    with open(file_path, "r", encoding = "utf-8") as file:
+        return file.read()
+    
+def save_html(file_path, content):
+    with open(file_path,"w", encoding = "utf-8") as file:
+        file.write(content)
+
+
+
+
+def main():
+    return 1
+
+
+if __name__ == "__main__":
+    main()
