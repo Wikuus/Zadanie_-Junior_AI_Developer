@@ -47,7 +47,7 @@ def main():
     article = read_article("artykul.txt")
     
     prompt = """
-    W podanym niżej artykule dodaj odpowiednie tagi HTML do strukturyzacji treści < i wstaw pomiędzy nie tekst z artykułu. We wszystkich miejscach, gdzie warto wstawić grafiki wstaw tag <img> z atrybutem src="image_placeholder.jpg oraz dodaj atrybut alt z dokładną treścią prompta, który umożliwi wygenerowanie odpowiedniej grafiki. Używając odpowiedniego tagu HTML umieść podpisy pod grafikami. Nie używaj CSS, Javascript i znaczników <body> <html> <head>
+    W podanym niżej artykule dodaj odpowiednie tagi HTML do strukturyzacji treści i wstaw pomiędzy nie tekst z artykułu. We wszystkich miejscach, gdzie warto wstawić grafiki wstaw tag <img> z atrybutem src="image_placeholder.jpg. Dodaj do tagów <img> atrybut alt z dokładną treścią prompta, który umożliwi wygenerowanie odpowiedniej grafiki. Używając odpowiedniego tagu HTML umieść podpisy pod dodanymi zdjęciami. Nie używaj CSS, Javascript i znaczników <body> <html> <head>
 
     Artykuł:
     """+article
