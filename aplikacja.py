@@ -44,7 +44,16 @@ def save_html(file_path, content):
 
 
 def main():
-    return 1
+    article = read_article("artykul.txt")
+    
+    prompt = """
+    W podanym niżej artykule dodaj odpowiednie tagi HTML do strukturyzacji treści < i wstaw pomiędzy nie tekst z artykułu. We wszystkich miejscach, gdzie warto wstawić grafiki wstaw tag <img> z atrybutem src="image_placeholder.jpg oraz dodaj atrybut alt z dokładną treścią prompta, który umożliwi wygenerowanie odpowiedniej grafiki. Używając odpowiedniego tagu HTML umieść podpisy pod grafikami. Nie używaj CSS, Javascript i znaczników <body> <html> <head>
+
+    Artykuł:
+    """+article
+    new_article = send_prompt(prompt)
+
+    save_html("artykul.html", new_article)
 
 
 if __name__ == "__main__":
